@@ -14,8 +14,8 @@ const Slider = () => {
                             <h1 className='text-4xl font-bold'>Affordable <br /> Price For Car  <br />Servicing</h1>
                             <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className=''>
-                                <button className="btn btn-secondary text-xl mr-5">Discover More</button>
-                                <button className="btn btn-outline text-xl text-white">Latest Project</button>
+                                <button className="btn btn-secondary  mr-5">Discover More</button>
+                                <button className="btn btn-outline  text-white">Latest Project</button>
                             </div>
                         </div>
                     </div>
@@ -31,8 +31,8 @@ const Slider = () => {
                             <h1 className='text-4xl font-bold'>Affordable <br /> Price For Car  <br />Servicing</h1>
                             <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className=''>
-                                <button className="btn btn-secondary text-xl mr-5">Discover More</button>
-                                <button className="btn btn-outline text-xl text-white">Latest Project</button>
+                                <button className="btn btn-secondary  mr-5">Discover More</button>
+                                <button className="btn btn-outline  text-white">Latest Project</button>
                             </div>
                         </div>
                     </div>
@@ -48,8 +48,8 @@ const Slider = () => {
                             <h1 className='text-4xl font-bold'>Affordable <br /> Price For Car  <br />Servicing</h1>
                             <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className=''>
-                                <button className="btn btn-secondary text-xl mr-5">Discover More</button>
-                                <button className="btn btn-outline text-xl text-white">Latest Project</button>
+                                <button className="btn btn-secondary mr-5">Discover More</button>
+                                <button className="btn btn-outline  text-white">Latest Project</button>
                             </div>
                         </div>
                     </div>
@@ -64,9 +64,9 @@ const Slider = () => {
                         <div className='text-white space-y-6 pl-12 w-1/2'>
                             <h1 className='text-4xl font-bold'>Affordable <br /> Price For Car  <br />Servicing</h1>
                             <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
-                            <div className=''>
-                                <button className="btn btn-secondary text-xl mr-5">Discover More</button>
-                                <button className="btn btn-outline text-xl text-white">Latest Project</button>
+                            <div>
+                                <button className="btn btn-secondary mr-5">Discover More</button>
+                                <button className="btn btn-outline  text-white">Latest Project</button>
                             </div>
                         </div>
                     </div>
