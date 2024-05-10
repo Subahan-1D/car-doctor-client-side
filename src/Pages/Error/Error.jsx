@@ -1,9 +1,9 @@
 
-
+import frame from '../../assets/images/frame1/Frame (1).png'
 const Error = () => {
     return (
-        <div>
-            <h1 className="text-7xl text-center font-bold mt-44">404 NOT FOUND</h1>
+        <div className='text-center'>
+            <img className='ml-40' src={frame} alt="" />
         </div>
     );
 };
