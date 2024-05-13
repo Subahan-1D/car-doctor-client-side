@@ -10,7 +10,7 @@ const Service = ({ service }) => {
                <div className="flex justify-between items-center text-red-500">
                <div><p className="card-title text-xl ">Price : {price}$</p></div>
                <div>
-                <Link to={`/checkout/${_id}`}>
+                <Link to={`/book/${_id}`}>
                 <button className="btn btn-secondary">Book Now<FaArrowRight></FaArrowRight></button>
                 </Link>
                </div>
