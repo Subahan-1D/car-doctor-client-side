@@ -1,11 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg'
 import { useContext, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../../Providers/AuthProviders';
+import axios from 'axios';
 const Login = () => {
 
-    const {singIn} = useContext(AuthContext);
+    const { singIn } = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate()
+    console.log(location);
 
     const [showPassword, setShowPassword] = useState(false)
     const handleLogin = e => {
@@ -15,13 +20,23 @@ const Login = () => {
         const password = form.password.value;
         const loginUser = { email, password };
         console.log(loginUser);
-        singIn(email,password)
-        .then(result =>{
-            console.log(result.user);
-        })
-        .then(error =>{
-            console.log(error);
-        })
+        singIn(email, password)
+            .then(result => {
+                const loggedInUser = result.user
+                console.log(loggedInUser);
+                const user = { email }
+                // get  access token 
+                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data);
+                        if (res.data.success) {
+                            navigate(location?.state ? location?.state : '/')
+                        }
+                    });
+            })
+            .then(error => {
+                console.log(error);
+            })
 
     }
     return (
@@ -45,12 +60,12 @@ const Login = () => {
                                     <span className="label-text">Confirm Password</span>
                                 </label>
                                 <div className='relative'>
-                                <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered w-full" required />
-                                <span className='absolute top-4 right-4' onClick={() => setShowPassword(!showPassword)}> 
-                                    {
-                                        showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
-                                    }
-                                </span>
+                                    <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered w-full" required />
+                                    <span className='absolute top-4 right-4' onClick={() => setShowPassword(!showPassword)}>
+                                        {
+                                            showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                        }
+                                    </span>
                                 </div>
                             </div>
                             <div className="form-control mt-6">

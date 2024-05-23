@@ -37,8 +37,8 @@ const logOut = () =>{
         if(currentUser){
             setUser(currentUser);
             console.log('Current User ', currentUser);
-            setLoading(false)
         }
+        setLoading(false)
     });
     return () =>{
         return unSubscribe;
